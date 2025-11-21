@@ -26,9 +26,9 @@ public class CalculatorService implements CalculatorServiceInterface {
         return int1 * int2;
     }
 
-    public int divideNum(int int1, int int2) throws ArithmeticException {
+    public int divideNum(int int1, int int2) throws IllegalArgumentException {
         if (int2 == 0) {
-            throw new ArithmeticException("А ты знал, что на 0 нельзя делить");
+            throw new IllegalArgumentException("А ты знал, что на 0 нельзя делить");
         }
         return int1 / int2;
     }
